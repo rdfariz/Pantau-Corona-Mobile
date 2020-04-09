@@ -36,7 +36,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="16dp"
                         android:background="@drawable/bg_card"
                         android:elevation="2dp"
                         android:paddingHorizontal="24dp"
@@ -50,7 +50,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Negara: -"
-                            android:textSize="18sp"
+                            android:textSize="16sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"/>
@@ -66,6 +66,25 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/section_titleData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintTop_toBottomOf="@+id/section_name">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Data Hari Ini"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"></TextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/section_positif"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -77,14 +96,14 @@
                         android:paddingVertical="32dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/section_name">
+                        app:layout_constraintTop_toBottomOf="@+id/section_titleData">
 
                         <TextView
                             android:id="@+id/tv_positif"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Positif: -"
-                            android:textSize="18sp"
+                            android:textSize="16sp"
                             android:textColor="#FFFFFF"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +123,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="16dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:background="@drawable/bg_card_meninggal"
                         android:elevation="2dp"
                         android:paddingHorizontal="24dp"
@@ -118,7 +137,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Meninggal: -"
-                            android:textSize="18sp"
+                            android:textSize="16sp"
                             android:textColor="#FFFFFF"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
