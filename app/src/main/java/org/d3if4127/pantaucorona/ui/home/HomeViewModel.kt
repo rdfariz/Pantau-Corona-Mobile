@@ -34,13 +34,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         repository = CoronaRepository(coronaDAO)
 
         crScope.launch {
-            try{
-                refreshData()
-            }catch (t: Throwable){
-
-            }finally {
-
-            }
+            refreshData()
         }
         _indonesia = repository.indonesia
     }

@@ -1,5 +1,7 @@
 package org.d3if4127.pantaucorona.ui.home
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -38,14 +40,18 @@ class homeFragment : Fragment() {
         binding.homeVM = homeVM
 
         homeVM.indonesia.observe(viewLifecycleOwner, Observer {
-            val name = it.get(0).name
-            val positif = it.get(0).positif
-            val meninggal = it.get(0).meninggal
+            var name = "-"
+            var positif = "-"
+            var meninggal = "-"
+            if (it.size > 0) {
+                name = it.get(0).name
+                positif = it.get(0).positif
+                meninggal = it.get(0).meninggal
+            }
 
             binding.tvName.text = "Negara: $name"
             binding.tvPositif.text = "Positif: $positif"
             binding.tvMeninggal.text = "Meninggal: $meninggal"
-            Log.i("tesVM", it.toString())
         })
 
         homeVM.loadingRefresh.observe(viewLifecycleOwner, Observer {
@@ -67,6 +73,16 @@ class homeFragment : Fragment() {
         }
     }
 
+    fun _showAlertAbout() {
+        val dialogBuilder = AlertDialog.Builder(context)
+        dialogBuilder.setMessage("Dibuat oleh\n RdFariz | 6706184127 | D3RPLA-42-04")
+        .setPositiveButton("Tutup", DialogInterface.OnClickListener { dialog, id ->
+        })
+        val alert = dialogBuilder.create()
+        alert.setTitle("Tentang Aplikasi")
+        alert.show()
+    }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
@@ -81,7 +97,7 @@ class homeFragment : Fragment() {
                 startActivity(i)
             }
             R.id.to_about_app -> {
-
+                _showAlertAbout()
             }
         }
         return super.onOptionsItemSelected(item)

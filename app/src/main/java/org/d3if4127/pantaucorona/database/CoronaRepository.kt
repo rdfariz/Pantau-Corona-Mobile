@@ -10,6 +10,7 @@ class CoronaRepository (private val coronaDAO: CoronaDAO) {
 
     suspend fun refreshCorona() {
         withContext(Dispatchers.IO) {
+//            coronaDAO.deleteAllData()
             val indonesia = CoronaApi.retrofitService.getDataIndonesia()
             coronaDAO.insertIndonesia(indonesia)
         }
