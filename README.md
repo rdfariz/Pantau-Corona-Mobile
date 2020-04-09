@@ -2,7 +2,7 @@
 App for monitoring corona virus in Indonesia, using kotlin || Side Project
 
 # Screen Shot
-![image info](./pictures/image.png)
+![scrennshot](https://raw.githubusercontent.com/rdfariz/Pantau-Corona-Mobile/master/pictures/image.jpg)
 
 # Link Demo
-[a link](https://drive.google.com/open?id=1jlHSSffy--jjIPzqtCv-uexQ3DqxPekB)
+[Comod disini bro](https://drive.google.com/open?id=1jlHSSffy--jjIPzqtCv-uexQ3DqxPekB)
