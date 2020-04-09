@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/to_version_web"
+        android:title="Lihat Versi Web" />
+    <item
+        android:id="@+id/to_about_app"
+        android:title="Tentang Aplikasi" />
+</menu>
